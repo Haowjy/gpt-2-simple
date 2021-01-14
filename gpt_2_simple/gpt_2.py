@@ -277,6 +277,7 @@ def finetune(sess,
             'Saving',
             os.path.join(checkpoint_path,
                          'model-{}').format(counter-1))
+        copy_checkpoint_to_gdrive(run_name=run_name)
         saver.save(
             sess,
             os.path.join(checkpoint_path, 'model'),
